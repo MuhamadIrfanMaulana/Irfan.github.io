@@ -573,5 +573,37 @@ footer .text span a:hover{
         color: #b74b4b;
     }
 
+    img {
+    max-width: 100%;
+    height: auto;
+    display: block; /* Menghilangkan margin bawah pada gambar */
+}
+
+.project-item img,
+.sertifikat-container img,
+.sertifikat-item img {
+    width: 100%; /* Pastikan gambar menempati seluruh container */
+    height: auto;
+    border-radius: 8px; /* Opsional: untuk memberikan efek sudut membulat */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Opsional: memberikan bayangan */
+}
+
+.project-container,
+.sertifikat-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Membuat grid responsif */
+    gap: 16px; /* Jarak antar item */
+    padding: 20px;
+}
+
+.sertifikat-container img {
+    transition: transform 0.3s ease; /* Menambahkan efek hover opsional */
+}
+
+.sertifikat-container img:hover {
+    transform: scale(1.05);
+}
+
+
 
 }
